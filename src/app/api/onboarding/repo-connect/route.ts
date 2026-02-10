@@ -41,13 +41,13 @@ export async function POST(request: NextRequest) {
         description: `Existing codebase: ${githubUrl}`,
         mode: mode || 'existing-codebase',
         status: 'initializing',
-        config: {
+        techStack: JSON.stringify({
           githubUrl,
           branch,
           owner,
           repo,
           analysis: analyzeExisting ? analysis : null,
-        },
+        }),
       },
     });
 

@@ -31,13 +31,13 @@ export async function POST(request: NextRequest) {
         description: projectDescription,
         mode: mode || 'start-from-zero',
         status: 'initializing',
-        config: {
-          techStack,
+        techStack: JSON.stringify({
+          technologies: techStack,
           features,
           timeline,
           teamSize,
           additionalContext,
-        },
+        }),
       },
     });
 

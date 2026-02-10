@@ -53,9 +53,14 @@ export default function NewDeployment() {
       });
       const result = await response.json();
       console.log('Deployment initiated:', result);
-      // TODO: Redirect to mission control dashboard
+      
+      // Redirect to review and launch page
+      if (result.deployment?.id) {
+        window.location.href = `/deploy/review/${result.deployment.id}`;
+      }
     } catch (error) {
       console.error('Deployment failed:', error);
+      alert('Deployment failed. Please try again.');
     }
   };
 

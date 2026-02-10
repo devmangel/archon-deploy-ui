@@ -152,30 +152,26 @@ export default function RepoConnectPage() {
         />
 
         {/* Access Token */}
-        <div className="space-y-2">
-          <FormInput
-            label="GitHub Personal Access Token"
-            type="password"
-            placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-            value={formData.accessToken}
-            onChange={(e) => setFormData({ ...formData, accessToken: e.target.value })}
-            error={errors.accessToken}
-            helperText={
-              <span>
-                Need a token?{' '}
-                <a
-                  href="https://github.com/settings/tokens/new?scopes=repo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-400 hover:text-emerald-300 underline"
-                >
-                  Create one here
-                </a>
-                {' '}(requires 'repo' scope)
-              </span>
-            }
-            required
-          />
+        <FormInput
+          label="GitHub Personal Access Token"
+          type="password"
+          placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+          value={formData.accessToken}
+          onChange={(e) => setFormData({ ...formData, accessToken: e.target.value })}
+          error={errors.accessToken}
+          required
+        />
+        <div className="text-xs text-zinc-500 -mt-4">
+          Need a token?{' '}
+          <a
+            href="https://github.com/settings/tokens/new?scopes=repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-400 hover:text-emerald-300 underline"
+          >
+            Create one here
+          </a>
+          {' '}(requires 'repo' scope)
         </div>
 
         {/* Branch */}
