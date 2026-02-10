@@ -37,18 +37,18 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/deploy/new"
+              href="/onboarding"
               className="group relative px-8 py-4 bg-emerald-500 text-zinc-950 font-semibold rounded-lg hover:bg-emerald-400 transition-all overflow-hidden"
             >
-              <span className="relative z-10">Start from Zero</span>
+              <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
             
             <Link
-              href="/deploy/existing"
+              href="/onboarding"
               className="px-8 py-4 border-2 border-zinc-700 font-semibold rounded-lg hover:border-emerald-500 hover:text-emerald-400 transition-all"
             >
-              Integrate Existing Codebase
+              Learn More
             </Link>
           </div>
         </div>
